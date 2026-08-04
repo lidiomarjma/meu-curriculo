@@ -5,15 +5,24 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Currículo - Lidiomar J. M. Alves</title>
+  <!-- Fonte Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <!-- Tailwind CSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <!-- html2pdf.js CDN para geração do PDF -->
+  <!-- html2pdf.js CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+  </style>
 </head>
 
-<body class="bg-slate-900 text-slate-100 font-sans p-4 md:p-8 min-h-screen">
+<body class="bg-slate-900 text-slate-100 p-4 md:p-8 min-h-screen">
 
-  <!-- Painel de Ações (Ocultado no PDF através da função JS) -->
+  <!-- Painel de Ações -->
   <div
     class="max-w-4xl mx-auto mb-6 flex justify-between items-center bg-slate-800 p-4 rounded-lg shadow-md border border-slate-700">
     <h1 class="text-xl font-bold text-sky-400">Painel do Currículo Web</h1>
@@ -34,82 +43,90 @@
     <!-- Cabeçalho -->
     <header class="border-b-2 border-sky-500 pb-6 mb-6">
       <h1 class="text-3xl font-extrabold text-slate-100">Lidiomar J. M. Alves</h1>
-      <p class="text-lg font-medium text-sky-400">Desenvolvedor de Software / Técnico em Desenvolvimento de Sistemas</p>
+      <!-- Cargo Atualizado -->
+      <p class="text-lg font-medium text-sky-400">Desenvolvedor FullStack / Freelance</p>
       <div class="mt-3 flex flex-wrap gap-4 text-sm text-slate-300">
         <span>📍 Santa Maria - RS</span>
         <span>✉️ lidiomarmillaalves@gmail.com</span>
         <span>📞 (55) 99146-0148</span>
         <span>🔗 <a href="https://github.com/lidiomarjma" class="text-sky-400 underline hover:text-sky-300"
             target="_blank">GitHub</a></span>
-        <span>💼 <a href="https://linkedin.com/in/SEU_PERFIL" class="text-sky-400 underline hover:text-sky-300"
-            target="_blank">LinkedIn</a></span>
+        <span>🔗 <a href="https://www.linkedin.com/in/lidiomar-millaalves/"
+            class="text-sky-400 underline hover:text-sky-300" target="_blank">LinKedin</a></span>
       </div>
     </header>
 
     <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <!-- Coluna Esquerda (Habilidades / Educação / Idiomas) -->
+      <!-- Coluna Esquerda -->
       <aside class="space-y-6">
-        <!-- Habilidades Técnicas -->
+        <!-- Principais Linguagens e Ferramentas Emfatisadas -->
         <section>
           <h2 class="text-base font-bold text-sky-400 border-b border-slate-700 pb-1 mb-3 uppercase tracking-wider">
-            Habilidades Técnicas</h2>
+            Linguagens & Tecnologias</h2>
           <div class="flex flex-wrap gap-1.5">
-            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded">Java</span>
-            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded">MySQL</span>
-            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded">Node.js</span>
-            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded">JavaScript</span>
-            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded">HTML5 / CSS3</span>
-            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded">Tailwind CSS</span>
-            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded">Git & GitHub</span>
-            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded">Vercel</span>
-            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded">CRUDs</span>
-            <span class="bg-slate-700 text-sky-300 text-xs font-semibold px-2.5 py-1 rounded">Scrum / Kanban</span>
+            <span
+              class="bg-sky-950 text-sky-300 border border-sky-700 text-xs font-semibold px-2.5 py-1 rounded">Java</span>
+            <span
+              class="bg-sky-950 text-sky-300 border border-sky-700 text-xs font-semibold px-2.5 py-1 rounded">JavaScript</span>
+            <span
+              class="bg-sky-950 text-sky-300 border border-sky-700 text-xs font-semibold px-2.5 py-1 rounded">Tailwind
+              CSS</span>
+            <span class="bg-sky-950 text-sky-300 border border-sky-700 text-xs font-semibold px-2.5 py-1 rounded">Linux
+              / Arch</span>
+            <span class="bg-sky-950 text-sky-300 border border-sky-700 text-xs font-semibold px-2.5 py-1 rounded">Tmux /
+              Neovim</span>
+            <span
+              class="bg-sky-950 text-sky-300 border border-sky-700 text-xs font-semibold px-2.5 py-1 rounded">MySQL</span>
+            <span class="bg-slate-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded">HTML5 / CSS3</span>
+            <span class="bg-slate-700 text-slate-300 text-xs font-semibold px-2.5 py-1 rounded">Git & GitHub</span>
           </div>
         </section>
 
-        <!-- Competências Comportamentais -->
+        <!-- Soft Skills -->
         <section>
           <h2 class="text-base font-bold text-sky-400 border-b border-slate-700 pb-1 mb-3 uppercase tracking-wider">Soft
             Skills</h2>
           <ul class="text-xs text-slate-300 space-y-1 list-disc list-inside">
-            <li>Fácil adaptação e rápida aprendizagem</li>
-            <li>Trabalho sob pressão e resolução de problemas</li>
-            <li>Pontualidade e gestão de tempo (SLA)</li>
-            <li>Responsabilidade operacional</li>
+            <li>Autonomia e Aprendizado Rápido</li>
+            <li>Resolução Prática de Problemas</li>
+            <li>Pontualidade e Gestão de Tempo</li>
+            <li>Trabalho Sob Pressão</li>
           </ul>
         </section>
 
-        <!-- Educação -->
+        <!-- Educação Atualizada -->
         <section>
           <h2 class="text-base font-bold text-sky-400 border-b border-slate-700 pb-1 mb-3 uppercase tracking-wider">
             Educação</h2>
           <div class="space-y-3">
+            <div>
+              <h3 class="font-bold text-sm text-slate-100">Desenvolvimento Autodidata</h3>
+              <p class="text-xs font-semibold text-sky-400">Estudo Contínuo & Prática Independente</p>
+              <p class="text-xs text-slate-300 mt-1">Foco em ecossistema Linux, automação via terminal (Tmux/Neovim),
+                desenvolvimento Web e Banco de Dados.</p>
+            </div>
             <div>
               <h3 class="font-bold text-sm text-slate-100">Técnico em Desenvolvimento de Sistemas</h3>
               <p class="text-xs font-semibold text-sky-400">SENAC</p>
               <p class="text-xs text-slate-400">Março/2026 – Setembro/2028 (Cursando)</p>
               <p class="text-xs text-slate-300 mt-1">Foco: Lógica de Programação, Java, MySQL e Metodologias Ágeis.</p>
             </div>
-            <div>
-              <h3 class="font-bold text-sm text-slate-100">Ensino Médio</h3>
-              <p class="text-xs text-slate-400">Completo</p>
-            </div>
           </div>
         </section>
       </aside>
 
-      <!-- Coluna Direita (Resumo / Projetos / Experiência) -->
+      <!-- Coluna Direita -->
       <main class="md:col-span-2 space-y-6">
         <!-- Resumo Profissional -->
         <section>
           <h2 class="text-base font-bold text-sky-400 border-b border-slate-700 pb-1 mb-3 uppercase tracking-wider">
             Resumo Profissional</h2>
           <p class="text-xs md:text-sm text-slate-300 leading-relaxed">
-            Estudante de Técnico em Desenvolvimento de Sistemas no SENAC, combinando formação acadêmica em Java, MySQL e
-            Metodologias Ágeis com experiência prática autônoma em HTML5, CSS3, Tailwind CSS, JavaScript, Node.js e
-            hospedagem na Vercel. Histórico profissional consolidado no setor operacional e de logística, trazendo forte
-            inteligência emocional, adaptabilidade a novos ambientes e rigoroso cumprimento de prazos. Buscando
-            oportunidades de Estágio ou posição Júnior em Desenvolvimento de Software.
+            Desenvolvedor FullStack / Freelance focado na criação de soluções web eficientes, personalizadas e
+            funcionais. Combino aprendizado autodidata no ecossistema Linux (Arch Linux, Tmux, Neovim), Java,
+            JavaScript, Tailwind CSS e MySQL com a formação técnica no SENAC. Possuo histórico operacional que me
+            proporcionou alta disciplina, organização, responsabilidade com prazos e capacidade de resolver problemas
+            com agilidade.
           </p>
         </section>
 
@@ -121,7 +138,7 @@
             <div>
               <div class="flex justify-between items-baseline">
                 <h3 class="font-bold text-sm text-slate-100">Currículo Web Interativo & Gerador de PDF</h3>
-                <span class="text-xs text-sky-400 font-medium">HTML, Tailwind CSS, JS</span>
+                <span class="text-xs text-sky-400 font-medium">Tailwind CSS, JS, HTML</span>
               </div>
               <p class="text-xs text-slate-300 mt-1">
                 Aplicação web responsiva desenvolvida para exibição de perfil profissional com conversão direta para PDF
@@ -129,7 +146,7 @@
               </p>
               <div class="mt-1 text-xs">
                 <a href="https://github.com/lidiomarjma/meu-curriculo" class="text-sky-400 hover:underline"
-                  target="_blank">🔗 Ver no GitHub</a> |
+                  target="_blank">🔗 GitHub</a> |
                 <a href="https://lidiomarjma.github.io/meu-curriculo/" class="text-sky-400 hover:underline"
                   target="_blank">🌐 Testar Aplicação</a>
               </div>
@@ -141,13 +158,9 @@
                 <span class="text-xs text-sky-400 font-medium">Java, MySQL</span>
               </div>
               <p class="text-xs text-slate-300 mt-1">
-                Projetos de prática focados na implementação de operações essenciais (Create, Read, Update, Delete),
-                integração com banco de dados relacional e manipulação de dados.
+                Projetos focados na construção de APIs/sistemas para criação, leitura, atualização e exclusão de dados
+                com integração relacional.
               </p>
-              <div class="mt-1 text-xs">
-                <a href="https://github.com/lidiomarjma" class="text-sky-400 hover:underline" target="_blank">🔗
-                  Repositório GitHub</a>
-              </div>
             </div>
           </div>
         </section>
@@ -164,19 +177,7 @@
               </div>
               <p class="text-xs font-semibold text-sky-400">Expresso Leomar LTDA</p>
               <p class="text-xs text-slate-300 mt-1">
-                Transporte e logística de cargas. Gestão de rotas, cumprimento rigoroso de horários/metas de entrega e
-                rápida resolução de imprevistos operacionais.
-              </p>
-            </div>
-
-            <div>
-              <div class="flex justify-between items-start">
-                <h3 class="font-bold text-sm text-slate-100">Motorista de Caminhão</h3>
-                <span class="text-xs text-slate-400">04/2025 – 07/2025</span>
-              </div>
-              <p class="text-xs font-semibold text-sky-400">Sustentare Saneamento S/A</p>
-              <p class="text-xs text-slate-300 mt-1">
-                Operação de veículos pesados com foco em eficiência, trabalho em equipe e adesão às normas de segurança.
+                Gestão de rotas, cumprimento rigoroso de horários/metas e resolução de imprevistos operacionais.
               </p>
             </div>
 
@@ -187,8 +188,7 @@
               </div>
               <p class="text-xs font-semibold text-sky-400">Cone Sul Soluções Ambientais LTDA</p>
               <p class="text-xs text-slate-300 mt-1">
-                Suporte às operações diárias, demonstrando disciplina, assiduidade e adaptabilidade a diferentes
-                tarefas.
+                Suporte operacional com foco em disciplina, trabalho em equipe e adaptabilidade a rotinas dinâmicas.
               </p>
             </div>
           </div>
@@ -197,7 +197,7 @@
     </div>
   </div>
 
-  <!-- Script para Gerar PDF (Arquivo Externo) -->
+  <!-- Script para Gerar PDF -->
   <script src="script.js"></script>
 </body>
 
