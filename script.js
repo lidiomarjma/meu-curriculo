@@ -2,7 +2,7 @@ function gerarPDF() {
   const elemento = document.getElementById('curriculo');
 
   const opcoes = {
-    margin: [12, 12, 12, 12], // Margem de 12mm em todas as bordas do papel
+    margin: 0, // Margem de 12mm em todas as bordas do papel
     filename: 'Curriculo_Lidiomar_Alves.pdf',
     image: { type: 'jpeg', quality: 0.98 },
     html2canvas: {
