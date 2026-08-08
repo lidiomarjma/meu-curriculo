@@ -1,6 +1,9 @@
 function gerarPDF() {
   const elemento = document.getElementById('curriculo');
 
+  const larguraPx = elemento.offsetWidth;
+  const alturaPx = elemento.offsetHeight;
+
   const opcoes = {
     margin: 0,
     filename: 'Curriculo_Lidiomar_Alves.pdf',
@@ -11,10 +14,15 @@ function gerarPDF() {
       logging: false,
       scrollX: 0,
       scrollY: 0,
-      windowWidth: document.documentElement.offsetWidth,
-      height: elemento.scrollHeight
+      width: larguraPx,
+      height: alturaPx
     },
-    jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
+    jsPDF: {
+      unit: 'px',
+      format: [larguraPx, alturaPx],
+      orientation: 'portrait',
+      hotfixes: ['px_scaling']
+    }
   };
 
   html2pdf().set(opcoes).from(elemento).save();
