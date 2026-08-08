@@ -1,19 +1,18 @@
 function gerarPDF() {
-  const original = document.getElementById('curriculo');
+  const elemento = document.getElementById('curriculo');
 
-  // Largura A4 em pixels a 96dpi, descontando margens (0mm aqui = 794px cheio)
+  // Guarda o estado original para restaurar depois
+  const classesOriginais = elemento.className;
+  const estiloOriginal = elemento.getAttribute('style') || '';
+
+  // Largura A4 em pixels a 96dpi
   const larguraA4px = 794;
 
-  // Cria um clone isolado, sem as classes que limitam/centralizam a largura
-  const clone = original.cloneNode(true);
-  clone.classList.remove('max-w-4xl', 'mx-auto');
-  clone.style.width = larguraA4px + 'px';
-  clone.style.maxWidth = larguraA4px + 'px';
-  clone.style.margin = '0';
-  clone.style.position = 'fixed';
-  clone.style.top = '0';
-  clone.style.left = '-9999px'; // fora da área visível, mas ainda renderizado
-  document.body.appendChild(clone);
+  // Remove classes que limitam/centralizam a largura e força a largura da folha
+  elemento.classList.remove('max-w-4xl', 'mx-auto');
+  elemento.style.width = larguraA4px + 'px';
+  elemento.style.maxWidth = larguraA4px + 'px';
+  elemento.style.margin = '0';
 
   const opcoes = {
     margin: 0,
@@ -30,7 +29,13 @@ function gerarPDF() {
     pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
   };
 
-  html2pdf().set(opcoes).from(clone).save().then(() => {
-    document.body.removeChild(clone); // limpa o clone depois de gerar
+  html2pdf().set(opcoes).from(elemento).save().then(() => {
+    // Restaura o elemento ao estado original, visível na tela
+    elemento.className = classesOriginais;
+    if (estiloOriginal) {
+      elemento.setAttribute('style', estiloOriginal);
+    } else {
+      elemento.removeAttribute('style');
+    }
   });
 }
