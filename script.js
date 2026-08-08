@@ -11,7 +11,8 @@ function gerarPDF() {
       logging: false,
       scrollX: 0,
       scrollY: 0,
-      windowWidth: document.documentElement.offsetWidth
+      windowWidth: document.documentElement.offsetWidth,
+      height: elemento.scrollHeight
     },
     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
   };
