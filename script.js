@@ -1,19 +1,14 @@
 function gerarPDF() {
   const elemento = document.getElementById('curriculo');
 
-  const classesOriginais = elemento.className;
-
-  elemento.className = "max-w-4xl mx-auto bg-white text-gray-900 p-8 md:p-12 rounded-lg border border-gray-300";
-
   const opcoes = {
-    margin: [10, 10, 10, 10],
+    margin: 0,
     filename: 'Curriculo_Lidiomar_Alves.pdf',
-    image: { type: 'jpeg', quality: 1.0 },
-    html2canvas: { scale: 2, useCORS: true },
+    image: { type: 'jpeg', quality: 0.98 },
+    html2canvas: { scale: 2, useCORS: true, logging: false },
     jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' }
   };
 
-  html2pdf().set(opcoes).from(elemento).save().then(() => {
-    elemento.className = classesOriginais;
-  });
+  // O html2pdf aciona a renderização em formato de mídia 'print'
+  html2pdf().set(opcoes).from(elemento).save();
 }
